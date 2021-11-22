@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Icon Hover</title>
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="navlist active">
+                <a href="">
+                <span class="navicon"><i class="fas fa-home"></i></span>
+                <span class="navtext">Home</span>
+                </a>
+            </li>
+            <li class="navlist ">
+                <a href="">
+                <span class="navicon"><i class="fas fa-user"></i></span>
+                <span class="navtext">Profile</span>
+                </a>
+            </li>
+            <li class="navlist ">
+                <a href="">
+                <span class="navicon"><i class="fas fa-comments"></i></span>
+                <span class="navtext">Massenge</span>
+                </a>
+            </li>
+            <li class="navlist ">
+                <a href="">
+                <span class="navicon"><i class="fas fa-question-circle"></i></span>
+                <span class="navtext">Help</span>
+                </a>
+            </li>
+            <li class="navlist ">
+                <a href="">
+                <span class="navicon"><i class="fas fa-cog"></i></span>
+                <span class="navtext">Settings</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <script>
+        let navlist = document.querySelectorAll('.navlist');
+        function setActiveClass(){
+            navlist.forEach((item) => 
+            item.classNavlist.remove('active'));
+            this.classNavlist.add('active');
+        }
+        navlist.forEach((item) =>
+        item.addEventListener('mouseover' , setActiveClass));
+    </script>  
+</body>
+</html>
